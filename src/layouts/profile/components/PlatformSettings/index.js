@@ -33,16 +33,16 @@ function PlatformSettings() {
 
   return (
     <Card sx={{ boxShadow: "none" }}>
-      <MDBox p={2}>
+      {/* <MDBox p={2}>
         <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           platform settings
         </MDTypography>
-      </MDBox>
+      </MDBox> */}
       <MDBox pt={1} pb={2} px={2} lineHeight={1.25}>
-        <MDTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
+        {/* <MDTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
           account
-        </MDTypography>
-        <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
+        </MDTypography> */}
+        {/* <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
           <MDBox mt={0.5}>
             <Switch checked={followsMe} onChange={() => setFollowsMe(!followsMe)} />
           </MDBox>
@@ -71,13 +71,13 @@ function PlatformSettings() {
               Email me when someone mentions me
             </MDTypography>
           </MDBox>
-        </MDBox>
-        <MDBox mt={3}>
+        </MDBox> */}
+        {/* <MDBox mt={3}>
           <MDTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
             application
           </MDTypography>
-        </MDBox>
-        <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
+        </MDBox> */}
+        {/* <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
           <MDBox mt={0.5}>
             <Switch checked={newLaunches} onChange={() => setNewLaunches(!newLaunches)} />
           </MDBox>
@@ -106,7 +106,7 @@ function PlatformSettings() {
               Subscribe to newsletter
             </MDTypography>
           </MDBox>
-        </MDBox>
+        </MDBox> */}
       </MDBox>
     </Card>
   );

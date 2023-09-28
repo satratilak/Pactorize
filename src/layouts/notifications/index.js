@@ -48,11 +48,12 @@ function Notifications() {
 
   const alertContent = (name) => (
     <MDTypography variant="body2" color="white">
-      A simple {name} alert with{" "}
+      {name}
+      {/* A simple {name} alert with{" "}
       <MDTypography component="a" href="#" variant="body2" fontWeight="medium" color="white">
         an example link
       </MDTypography>
-      . Give it a click if you like.
+      . Give it a click if you like. */}
     </MDTypography>
   );
 
@@ -122,12 +123,12 @@ function Notifications() {
               </MDBox>
               <MDBox pt={2} px={2}>
                 <MDAlert color="primary" dismissible>
-                  {alertContent("primary")}
+                  {alertContent("Pact 1 Alert Info")}
                 </MDAlert>
                 <MDAlert color="secondary" dismissible>
-                  {alertContent("secondary")}
+                  {alertContent("Pact 1 Alert Info")}
                 </MDAlert>
-                <MDAlert color="success" dismissible>
+                {/* <MDAlert color="success" dismissible>
                   {alertContent("success")}
                 </MDAlert>
                 <MDAlert color="error" dismissible>
@@ -144,12 +145,12 @@ function Notifications() {
                 </MDAlert>
                 <MDAlert color="dark" dismissible>
                   {alertContent("dark")}
-                </MDAlert>
+                </MDAlert> */}
               </MDBox>
             </Card>
           </Grid>
 
-          <Grid item xs={12} lg={8}>
+          {/* <Grid item xs={12} lg={8}>
             <Card>
               <MDBox p={2} lineHeight={0}>
                 <MDTypography variant="h5">Notifications</MDTypography>
@@ -186,7 +187,7 @@ function Notifications() {
                 </Grid>
               </MDBox>
             </Card>
-          </Grid>
+          </Grid> */}
         </Grid>
       </MDBox>
       <Footer />

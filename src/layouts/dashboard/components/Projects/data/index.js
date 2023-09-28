@@ -71,10 +71,10 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "companies", accessor: "companies", width: "45%", align: "left" },
-      { Header: "members", accessor: "members", width: "10%", align: "left" },
-      { Header: "budget", accessor: "budget", align: "center" },
-      { Header: "completion", accessor: "completion", align: "center" },
+      { Header: "Pact Type", accessor: "companies", width: "45%", align: "left" },
+      { Header: "Entities", accessor: "members", width: "10%", align: "left" },
+      { Header: "Amount", accessor: "budget", align: "center" },
+      { Header: "Pact Status", accessor: "completion", align: "center" },
     ],
 
     rows: [

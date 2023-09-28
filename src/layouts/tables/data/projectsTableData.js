@@ -19,6 +19,7 @@ Coded by www.creative-tim.com
 import Icon from "@mui/material/Icon";
 
 // Material Dashboard 2 React components
+import Tooltip from "@mui/material/Tooltip";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
@@ -31,6 +32,10 @@ import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
 import logoSlack from "assets/images/small-logos/logo-slack.svg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
 import logoInvesion from "assets/images/small-logos/logo-invision.svg";
+import team1 from "assets/images/team-1.jpg";
+import team2 from "assets/images/team-2.jpg";
+import team3 from "assets/images/team-3.jpg";
+import team4 from "assets/images/team-4.jpg";
 
 export default function data() {
   const Project = ({ image, name }) => (
@@ -53,13 +58,39 @@ export default function data() {
     </MDBox>
   );
 
+  const avatars = (members) =>
+    members.map(([image, name]) => (
+      <Tooltip key={name} title={name} placeholder="bottom">
+        <MDAvatar
+          src={image}
+          alt="name"
+          size="xs"
+          sx={{
+            border: ({ borders: { borderWidth }, palette: { white } }) =>
+              `${borderWidth[2]} solid ${white.main}`,
+            cursor: "pointer",
+            position: "relative",
+
+            "&:not(:first-of-type)": {
+              ml: -1.25,
+            },
+
+            "&:hover, &:focus": {
+              zIndex: "10",
+            },
+          }}
+        />
+      </Tooltip>
+    ));
+
   return {
     columns: [
-      { Header: "project", accessor: "project", width: "30%", align: "left" },
-      { Header: "budget", accessor: "budget", align: "left" },
-      { Header: "status", accessor: "status", align: "center" },
-      { Header: "completion", accessor: "completion", align: "center" },
-      { Header: "action", accessor: "action", align: "center" },
+      { Header: "Pact Type", accessor: "project", width: "15%", align: "left" },
+      { Header: "Entities Involved", accessor: "entities", align: "center" },
+      { Header: "Pact Amount", accessor: "budget", align: "left" },
+      { Header: "Status", accessor: "status", align: "center" },
+      { Header: "Completion", accessor: "completion", align: "center" },
+      // { Header: "action", accessor: "action", align: "center" },
     ],
 
     rows: [
@@ -69,6 +100,16 @@ export default function data() {
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             $2,500
           </MDTypography>
+        ),
+        entities: (
+          <MDBox display="flex" py={1}>
+            {avatars([
+              [team1, "Ryan Tompson"],
+              [team2, "Romina Hadid"],
+              [team3, "Alexander Smith"],
+              [team4, "Jessica Doe"],
+            ])}
+          </MDBox>
         ),
         status: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
@@ -89,6 +130,16 @@ export default function data() {
             $5,000
           </MDTypography>
         ),
+        entities: (
+          <MDBox display="flex" py={1}>
+            {avatars([
+              [team1, "Ryan Tompson"],
+              [team2, "Romina Hadid"],
+              [team3, "Alexander Smith"],
+              [team4, "Jessica Doe"],
+            ])}
+          </MDBox>
+        ),
         status: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             done
@@ -107,6 +158,16 @@ export default function data() {
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             $3,400
           </MDTypography>
+        ),
+        entities: (
+          <MDBox display="flex" py={1}>
+            {avatars([
+              [team1, "Ryan Tompson"],
+              [team2, "Romina Hadid"],
+              [team3, "Alexander Smith"],
+              [team4, "Jessica Doe"],
+            ])}
+          </MDBox>
         ),
         status: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
@@ -127,6 +188,16 @@ export default function data() {
             $14,000
           </MDTypography>
         ),
+        entities: (
+          <MDBox display="flex" py={1}>
+            {avatars([
+              [team1, "Ryan Tompson"],
+              [team2, "Romina Hadid"],
+              [team3, "Alexander Smith"],
+              [team4, "Jessica Doe"],
+            ])}
+          </MDBox>
+        ),
         status: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             working
@@ -146,6 +217,16 @@ export default function data() {
             $1,000
           </MDTypography>
         ),
+        entities: (
+          <MDBox display="flex" py={1}>
+            {avatars([
+              [team1, "Ryan Tompson"],
+              [team2, "Romina Hadid"],
+              [team3, "Alexander Smith"],
+              [team4, "Jessica Doe"],
+            ])}
+          </MDBox>
+        ),
         status: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             canceled
@@ -164,6 +245,16 @@ export default function data() {
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             $2,300
           </MDTypography>
+        ),
+        entities: (
+          <MDBox display="flex" py={1}>
+            {avatars([
+              [team1, "Ryan Tompson"],
+              [team2, "Romina Hadid"],
+              [team3, "Alexander Smith"],
+              [team4, "Jessica Doe"],
+            ])}
+          </MDBox>
         ),
         status: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
